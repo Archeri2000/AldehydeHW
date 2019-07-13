@@ -1,46 +1,52 @@
 // Fetching HTML Elements in Variables by ID.
 var x = document.getElementById("form_js");
 
-var createform = document.createElement('form'); // Create New Element Form
-createform.setAttribute("action", ""); // Setting Action Attribute on Form
-createform.setAttribute("method", "post"); // Setting Method Attribute on Form
+var createform = document.createElement('span'); // Create New Element Form
+createform.setAttribute("class", "js_input");
 x.appendChild(createform);
 
-var nameLabel = document.createElement('label'); // Create Label for Name Field
-nameLabel.innerHTML = "Username : "; // Set Field Labels
-createform.appendChild(nameLabel);
+var nameWrapper = document.createElement('span');
+nameWrapper.setAttribute("class", "inField");
+
 
 var nameInput = document.createElement('input'); // Create Input Field for Name
 nameInput.setAttribute("type", "text");
+nameInput.setAttribute("placeholder", "Username");
 nameInput.setAttribute("name", "dname");
-createform.appendChild(nameInput);
+nameWrapper.appendChild(nameInput);
 
-var nameLine = document.createElement('br');
-createform.appendChild(nameLine);
+var nameSpan = document.createElement('span');
+nameWrapper.appendChild(nameSpan);
+createform.appendChild(nameWrapper);
 
-var emailLabel = document.createElement('label'); // Create Label for Email Field
-emailLabel.innerHTML = "Email : "; // Set Field Labels
-createform.appendChild(emailLabel);
+
+var emailWrapper = document.createElement('span');
+emailWrapper.setAttribute("class", "inField");
 
 var emailInput = document.createElement('input'); // Create Input Field for Email
 emailInput.setAttribute("type", "text");
+emailInput.setAttribute("placeholder", "Email");
 emailInput.setAttribute("name", "demail");
-createform.appendChild(emailInput);
+emailWrapper.appendChild(emailInput);
 
-var emailLine = document.createElement('br');
-createform.appendChild(emailLine);
+var emailSpan = document.createElement('span');
+emailWrapper.appendChild(emailSpan);
+createform.appendChild(emailWrapper);
 
-var ageLabel = document.createElement('label'); // Create Label for Age Field
-ageLabel.innerHTML = "Age : "; // Set Field Labels
-createform.appendChild(ageLabel);
+
+var ageWrapper = document.createElement('span');
+ageWrapper.setAttribute("class", "inField");
 
 var ageInput = document.createElement('input'); // Create Input Field for Age
 ageInput.setAttribute("type", "text");
+ageInput.setAttribute("placeholder", "Age");
 ageInput.setAttribute("name", "dage");
-createform.appendChild(ageInput);
+ageWrapper.appendChild(ageInput);
 
-var ageLine = document.createElement('br');
-createform.appendChild(ageLine);
+var ageSpan = document.createElement('span');
+ageWrapper.appendChild(ageSpan);
+createform.appendChild(ageWrapper);
+
 
 document.getElementById('checker').addEventListener('click', function (event) {
 	var username = document.getElementsByName("dname")[0].value;
