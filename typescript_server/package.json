@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^12.6.6",
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.8",
     "capitalise_js": "file:../capitalise_js",
+    "express": "^4.17.1",
     "http": "0.0.0"
   }
 }
